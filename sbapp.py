@@ -1,10 +1,12 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from skimage.transform import resize
+import tensorflow as tf
 from tensorflow import keras
 from skimage.io import imread
 
-model = keras.models.load_model('sbcnn.h5')
+
+model = tf.keras.models.load_model('sbcnn.h5')('sbcnn.h5')
 categories=['Volleyball', 'Tennis ball', 'Football', 'Cricket ball', 'Basketball']
 st.set_page_config(layout="wide")
 st.title(":red[SPORTS BALL TYPE PREDICTION ]")
